@@ -1,0 +1,207 @@
+// JavaScript Document
+setInterval("myInterval()",10000);
+var boolean=true;
+function myInterval(){
+	if(boolean){
+		big();boolean=false;
+		/*}else{
+			small();boolean=true;*/
+			}
+	}
+function big(){
+	$(".callback").animate({'background-size':'100%','opacity':1.00},2500);
+	$(".callback a").animate({'background-size':'100%','opacity':1.00},2000);
+	}
+function small(){
+	$(".callback").animate({'background-size':'0%','opacity':0.20},2000);
+	$(".callback a").animate({'background-size':'0%','opacity':0.20},2000);
+	}
+	
+
+//邮币卡首页弹出框
+function tobe() {
+	
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn();
+		$('#tobe').css('display', 'block');
+		$('#apply').css('display', 'none');
+		$('.chaticons.cs3').css("border-left","1px solid #ccc");
+	}
+function tobe_close() {
+	$('#mask').fadeOut();
+	$('#tobe').css('display', 'none');
+}	
+
+//首页回拨电话
+function callback() {
+	
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn();
+		$('#stop').css('display', 'block');
+		$('#apply').css('display', 'none');
+		$('.chaticons.cs3').css("border-left","1px solid #ccc");
+	}
+function pause_close() {
+	$('#mask').fadeOut();
+	$('#stop').css('display', 'none');
+}	
+//首页电话申请
+function callme() {
+	
+		/*$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn();*/
+		$('#apply').css('display', 'block');
+		$('.chaticons.cs3').css("border-left","0");
+	}
+function callmeclose() {
+	/*$('#mask').fadeOut();*/
+	$('#apply').css('display', 'none');
+	$('.chaticons.cs3').css("border-left","1px solid #ccc");
+}		
+
+$(function(){
+	$(".UBnav ul").slideDown();
+	$(".UBnav.perUB .mycount.shmy").slideDown('fast');
+	$(".callback").css('background-size','10%');
+	$(".reddiv").hover(function(){
+		
+		$(this).find(".bicons").stop().animate({height:'60'},'500');
+		
+	},function(){
+		$(this).find(".bicons").stop().animate({height:'0'},'500');
+		})
+		
+		
+//挂牌流程
+	
+	
+	$(".twotit a").click(function(){
+		var t=$(this).index();
+		$(this).siblings("a").removeClass("twocur");
+		$(this).addClass("twocur");
+		$(this).parent("p").siblings("div").css("display","none");
+		$(this).parent("p").siblings("div").eq(t).css("display","block");
+		
+	});
+	/*$(".gplink").click(function(){
+		$(this).parent("p").siblings("div").css("display","none");
+		$(".gplc").css("display","block");
+		$(this).siblings("a").removeClass("twocur");
+		$(this).addClass("twocur");
+	});*/
+
+		
+//回拨电话
+var Cwidth=$(window).width();
+$(".callback").css("right","50px");
+$(".flex-control-nav").css("position","absolute").css("left",(Cwidth-1000)/2);
+
+//展开更多
+var fl=0;
+$(".zw").click(function(){
+	fl++;
+	if(fl%2!=0){
+	$(this).parent("span").siblings(".recuitp").slideDown();
+	}else{
+		$(this).parent("span").siblings(".recuitp").hide();
+		}
+});
+
+$(".morecont").click(function(){
+	$(this).parent("span").hide();
+});
+
+
+//查看注册考试结果
+$(".btn_account.exa").click(function(){
+	$(".hidescore").fadeIn();
+	})
+
+
+//
+$(".UBnav.perUB h2 a").click(function(){
+	
+	$(this).parent("h2").siblings(".mycount").slideDown('fast');
+	$(this).parent("h2").parent("div").siblings("div").children(".mycount").hide();
+	
+	$(this).parent("h2").addClass("curr");
+	$(this).parent("h2").parent("div").siblings("div").children("h2").removeClass("curr");
+});
+
+/*$(".conlbox").mouseover(function(){
+	$(".consultbox").css("display","block")
+	})
+$(".consultbox").mouseout(function(){
+	$(this).css("display","none")
+	})*/
+//资金安全
+/*$(".UBleft.csleft").css("background","#fff").css("position","fixed").css("left",(Cwidth-1000)/2).css("top","220px").css("z-index","200");*/
+
+//资金安全页面选项卡效果
+/*$(".csleft li").click(function(){
+	var i=$(this).index();
+	$(this).siblings("li").find("a").css("color","#333");
+	$(this).find("a").css("color","#fd632f");
+	$(".UBright.csafe .safecont").hide();
+	$(".UBright.csafe .safecont:eq("+i+")").show();
+});
+		
+t = document.documentElement.scrollTop;
+var wh=$(window).height();
+$(window).scroll(function(){
+	var s=wh-$(window).scrollTop();
+	if(s<1000){
+		$(".UBleft.csleft").css("background","#fff").css("position","fixed").css("left",(Cwidth-1000)/2).css("top","220px").css("z-index","200");
+	}else{
+		$(".UBleft.csleft").css("background","#fff").css("position","absolute").css("left",(Cwidth-1000)/2).css("top","220px").css("z-index","200");
+		}
+	});*/
+	
+	
+	
+  //首页
+  $(".news_right .rb1 img").hover(function(){
+	  $(this).attr("src","images/index_icon161.png");
+  },function(){
+	  $(this).attr("src","images/index_icon16.png");
+	});
+  
+  $(".news_right .rb2 img").hover(function(){
+	  $(this).attr("src","images/index_icon131.png");
+  },function(){
+	  $(this).attr("src","images/index_icon13.png");
+	});
+	
+	//联系我们
+	
+	$(".smallpicture .rb1 a img").hover(function(){
+	  $(this).attr("src","images/index_icon161.png");
+  },function(){
+	  $(this).attr("src","images/index_icon16.png");
+	});
+  
+  $(".smallpicture .rb2 a img").hover(function(){
+	  $(this).attr("src","images/index_icon131.png");
+  },function(){
+	  $(this).attr("src","images/index_icon13.png");
+	});
+	
+	
+	
+	
+	
+});
+
+
+//弹出框
+
+function pumpbox() {
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn();
+		$('#pump').css('display', 'block');
+}
+function closepump() {
+	$('#mask').fadeOut();
+	$('#pump').css('display', 'none');
+}	
+

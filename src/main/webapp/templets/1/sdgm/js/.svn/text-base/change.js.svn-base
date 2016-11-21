@@ -1,0 +1,56 @@
+$(document).ready(function() {
+
+
+    $(".zx_tab").find("ul li").mouseover(function() {
+        $(".zx_tab").find("ul li").removeClass("current");
+        $(this).addClass("current");
+        var index = $(this).index();
+        $(".zx_list").find("dl").hide();
+        $(".zx_list").find("dl").eq(index).show();
+    });
+    $(".title_m").find("a").mouseover(function() {
+        $(".title_m").find("a").removeClass("current").addClass("tab");
+        $(this).addClass("current").removeClass("tab");
+        $(".dec_list").hide();
+        $(".dec_list").eq($(this).index()).show();
+    });
+    var news = $(".newsall").html();
+
+    $(".newsall").append(news + news + news + news);
+    $(".newsall").find("ul").hide();
+    $(".newsall").find("ul").eq(0).show();
+    $(".tab_list").find("li").mouseover(function() {
+        $(".tab_list").find("li").removeClass("current");
+        $(this).addClass("current");
+        $(".newsall").find("ul").hide();
+        $(".newsall").find("ul").eq($(this).index()).show();
+    });
+
+    function currentTime() {
+        var d = new Date(), str = '';
+        str += d.getFullYear() + '.';
+        str += d.getMonth() + 1 + '.';
+        str += d.getDate() + '<br />';
+        str += d.getHours() + ' :';
+        str += d.getMinutes() + ':';
+        str += d.getSeconds();
+        return str;
+    }
+    setInterval(function() { $('#time').html(currentTime) }, 1000);
+
+    $(".close").click(function() {
+        $(".chat").animate({
+            width: 0
+        }, 1000)
+        $(".chat").hide();
+        $(".chat_1").show();
+    })
+    $(".chat_1").click(function() {
+        $(".chat_1").hide();
+        $(".chat").show();
+        $(".chat").animate({
+            width: 106
+        }, 1000)
+
+    })
+});

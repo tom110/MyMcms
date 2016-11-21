@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9"/>
+    <script src="{ms:globalskin.url/}js/jquery-1.4.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="{ms:globalskin.url/}js/nav.js"></script>
+    <script type="text/javascript" src="{ms:globalskin.url/}js/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}css/main.css">
+    <link rel="stylesheet" type="text/css" href="{ms:globalskin.url/}css/styles.css">
+    <title>{ms:global.name/}</title>
+</head>
+<body style="position:relative">
+{ms:include filename=header.html/}
+<div class="warp">
+    <div class="listpage clearfix">
+        <div class="lmenu">
+            <h2>{ms:field.typetitle type=top/}</h2>
+            <ul class="menus">
+                {ms:channel type=level order=desc}
+                <li><a class="menulink" href="[field.typelink/]">[field.typetitle/]</a></li>
+                {/ms:channel}
+            </ul>
+        </div>
+        <div class="rcon">
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li class="active"> - {ms:field.typetitle/} - 详细内容</li>
+            </ol>
+            <div class="newscon">
+                <div class="news-tit mt20">{ms:field.title/}</div>
+                <div class="news-remark">来源：<span class="mr40">{ms:field.source/}</span>发布时间：<span class="mr40">{ms:field.date fmt=yyyy-MM-dd hh:mm/}</span>浏览次数：<span>{ms:field.hit/}<span>次</span></span>
+                </div>
+                <div class="news-info">
+                    <p class="pmb30">
+                        {ms:field.content/}</p>
+                    <p class="ptr">{ms:field.author/}</p>
+                    <p class="ptr">{ms:field.date fmt=yyyy-MM-dd hh:mm/}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{ms:include filename=footer.html/}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".menus li").each(function(){
+            if($(this).text().trim()=="{ms:field.typetitle/}"){
+                console.log(1);
+                $(this).children("a").addClass("active");
+            }
+        })
+    });
+</script>
+</body>
+</html>

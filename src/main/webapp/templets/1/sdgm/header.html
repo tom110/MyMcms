@@ -1,0 +1,89 @@
+<div class="topbox"></div>
+<div class="head">
+    <a href="index.html"><img style="margin-top:5px" src="{ms:globalskin.url/}images/logo.png"/></a>
+    <div class="headright">
+        <div class="searchbox ind">
+            <a href="#" class="btn_loading">设为首页</a>
+            <a href="#" class="btn_loading" style="margin-left: 10px;">收藏本站</a>
+            <a href="#" class="btn_loading" style="margin-left: 10px;margin-right: 10px;">联系我们</a>
+        </div>
+        <div class="clearh" style="height:0"></div>
+    </div>
+    <div class="c_search">
+        <form id="searchDataForm" action="{ms:global.host/}/cms/19/search.do" method="post">
+            <p class="Right"><input name="" type="submit" class="annu pointer" value="搜 索"/></p>
+            <p class="Right"><input name="article_content" type="text" class="input" placeholder="输入搜索内容"/></p>
+        </form>
+    </div>
+</div>
+<div id="top_bg">
+    <div class="top1">
+        <!--导航开始-->
+        <div class="nav_z">
+            <ul id="navul" class="cl">
+                <li><a href="{ms:global.host/}">首页</a></li>
+                <li><a href="#">山东地矿</a>
+                    <ul>
+                        {ms:channel type=son typeid=157 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">新闻中心</a>
+                    <ul>
+                        {ms:channel type=son typeid=165 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">政务公开</a>
+                    <ul>
+                        {ms:channel type=son typeid=171 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">地质勘查</a>
+                    <ul>
+                        {ms:channel type=son typeid=183 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">地矿文化</a>
+                    <ul>
+                        {ms:channel type=son typeid=188 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">地矿科技</a>
+                    <ul>
+                        {ms:channel type=son typeid=195 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <li><a href="#">地矿成果</a>
+                    <ul>
+                        {ms:channel type=son typeid=197 order=desc}
+                        <li><a href="[field.typelink/]">[field.typetitle/]</a></li>
+                        {/ms:channel}
+                    </ul>
+                </li>
+                <!--可在此处直接添加导航-->
+            </ul>
+            <div class="s_signin">登录</div>
+        </div>
+        <!--导航结束-->
+    </div>
+</div>
+<div class="flexslider">
+    <ul class="slides">
+        <li style="background:url({ms:globalskin.url/}images/img1.jpg) 50% 0 no-repeat;"></li>
+        <li style="background:url({ms:globalskin.url/}images/img2.jpg) 50% 0 no-repeat;"></li>
+        <li style="background:url({ms:globalskin.url/}images/img3.jpg) 50% 0 no-repeat;"></li>
+        <li style="background:url({ms:globalskin.url/}images/img4.jpg) 50% 0 no-repeat;"></li>
+        <li style="background:url({ms:globalskin.url/}images/img5.jpg) 50% 0 no-repeat;"></li>
+    </ul>
+</div>
