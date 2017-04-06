@@ -49,6 +49,15 @@
                 console.log(1);
                 $(this).children("a").addClass("active");
             }
+
+            $(".s_signin").click(function () {
+                window.location.href = "http://123.233.240.221:8099/permission";
+            });
+
+            if(window.addEventListener){
+                $(".news-info").find("img").parent().css("text-align","-webkit-center");
+                $(".news-info").find("img").css("margin","auto");
+            }
         })
     });
 </script>
